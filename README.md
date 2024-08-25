@@ -1,9 +1,9 @@
 ```For Frontend ```
-*cd MoHUA*
-*npm install*
-*npm run dev*
+1.*cd MoHUA*
+2.*npm install*
+3.*npm run dev*
 ```For Backend ```
-*cd Backend*
-*npm install*
-*npm run dev*
+1.*cd Backend*
+2.*npm install*
+3.*npm run dev*
 
