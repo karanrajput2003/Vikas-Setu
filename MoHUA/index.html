@@ -2,12 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/jpg" href="favicon.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vikas Setu</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: 'en', includedLanguages: 'en,hi', layout: google.translate.TranslateElement.InlineLayout.SIMPLE },
+          'google_translate_element'
+        );
+      }
+    </script>
+    <script type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      <script type="text/javascript">
+        function removeGoogleBranding() {
+          // Hide the Google Translate powered-by text
+          var branding = document.querySelector("#google_translate_element .goog-logo-link");
+          if (branding) {
+            branding.style.display = 'none';
+          }
+
+          // Hide the Google Translate logo
+          var logo = document.querySelector(".goog-te-gadget span");
+          if (logo) {
+            logo.style.display = 'none';
+          }
+        }
+
+        // Ensure that the removal happens after Google Translate loads
+        setTimeout(removeGoogleBranding, 1000);
+      </script>
   </body>
 </html>
