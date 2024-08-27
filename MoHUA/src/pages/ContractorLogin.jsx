@@ -14,8 +14,36 @@ function ContractorLogin() {
   const [errorMessage, setErrorMessage] = useState("");
 
   const onSubmit = async (data) => {
-    // After Successful redirect to dashboard.jsx
-    console.log(data);
+    setIsLoading(true);
+    setErrorMessage("");
+
+    try {
+      const response = await fetch("http://localhost:8080/auth/signin", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        // Save the token in local storage
+        localStorage.setItem("token", result.token);
+        
+        // Redirect to dashboard
+        navigate("/dashboard");
+      } else {
+        // Show error message
+        setErrorMessage(result.message);
+      }
+    } catch (error) {
+      console.error("Error during login:", error);
+      setErrorMessage("An error occurred. Please try again later.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -41,10 +69,10 @@ function ContractorLogin() {
               </label>
               <div className="mt-2">
                 <input
-                  {...register("username")}
-                  type="username"
-                  placeholder="Username"
-                  autoComplete="username"
+                  {...register("email")}
+                  type="email"
+                  placeholder="Email"
+                  autoComplete="email"
                   required
                   className="block w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />

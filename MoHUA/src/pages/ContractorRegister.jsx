@@ -14,9 +14,34 @@ function ContractorRegister() {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = async (data) => {
-    // After Successful redirect to dashboard.jsx
-
-    console.log(data);
+    setIsLoading(true);
+    setErrorMessage("");
+  
+    try {
+      const response = await fetch("http://localhost:8080/auth/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+  
+      const result = await response.json();
+  
+      if (response.ok) {
+        // Redirect to the dashboard or login page after successful registration
+        console.log("signedUp")
+        //navigate("/dashboard"); // Adjust the path as necessary
+      } else {
+        // Handle errors, e.g., show a message to the user
+        setErrorMessage(result.message);
+      }
+    } catch (error) {
+      console.error("Error during registration:", error);
+      setErrorMessage("Something went wrong. Please try again later.");
+    } finally {
+      setIsLoading(false);
+    }
   };
   return (
     <>

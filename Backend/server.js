@@ -1,7 +1,12 @@
 const express = require("express");
 const mongoose = require("mongoose");
-
+const authRoutes = require("./routes/auth");
+const cors = require('cors');
+const bodyParser = require("body-parser");
 const app = express();
+app.use(express.json());
+
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to application." });
@@ -24,6 +29,18 @@ db.mongoose
     console.error("Connection error", err);
     process.exit();
   });
+
+
+  app.use("/auth", authRoutes);
+
+
+
+
+
+
+
+
+
 
 
 const PORT = process.env.PORT || 8080;
