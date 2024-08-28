@@ -14,8 +14,8 @@ function App() {
       <MiddleNavbar />
       <MainNavbar />
       <HomeContent />
-      {/* <CarouselFooter /> */}
-      {/* <Footer /> */}
+      {/* <CarouselFooter />
+      <Footer /> */}
     </>
   )
 }

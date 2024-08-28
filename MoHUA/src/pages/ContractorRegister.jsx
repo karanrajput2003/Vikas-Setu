@@ -30,6 +30,7 @@ function ContractorRegister() {
   
       if (response.ok) {
         // Redirect to the dashboard or login page after successful registration
+        navigate("/contractorlogin");
         console.log("signedUp")
         //navigate("/dashboard"); // Adjust the path as necessary
       } else {

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, redirect } from "react-router-dom";
+import { Link, redirect,useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import TopNavbar from "../components/TopNavbar";
@@ -9,6 +9,7 @@ import MainNavbar from "../components/MainNavbar";
 import { useForm } from "react-hook-form";
 import dashboard from "./dashboard";
 function ContractorLogin() {
+  const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -33,7 +34,7 @@ function ContractorLogin() {
         localStorage.setItem("token", result.token);
         
         // Redirect to dashboard
-        navigate("/dashboard");
+        navigate("/contractor");
       } else {
         // Show error message
         setErrorMessage(result.message);
