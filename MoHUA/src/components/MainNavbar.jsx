@@ -10,10 +10,10 @@ function MainNavbar() {
             <Link to="/" className="text-sm">
               LLLLL
             </Link>
-            <Link to="/" className="text-sm">
+            <Link to="/contractor" className="text-sm">
               FFFFF
             </Link>
-            <Link to="/" className="text-sm">
+            <Link to="/admin" className="text-sm">
               KKKKK
             </Link>
           </div>
