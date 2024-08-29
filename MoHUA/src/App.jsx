@@ -3,6 +3,7 @@ import TopNavbar from './components/TopNavbar'
 import HomeContent from './components/HomeContent'
 import MiddleNavbar from './components/MiddleNavbar'
 import MainNavbar from './components/MainNavbar'
+import GoogleCalendar from "./components/GoogleCalendar";
 import CarouselFooter from './components/CarouselFooter'
 import Footer from './components/Footer'
 
@@ -14,8 +15,9 @@ function App() {
       <MiddleNavbar />
       <MainNavbar />
       <HomeContent />
-      {/* <CarouselFooter />
-      <Footer /> */}
+      <GoogleCalendar />
+      <CarouselFooter />
+      <Footer /> 
     </>
   )
 }
