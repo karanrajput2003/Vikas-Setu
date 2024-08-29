@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Project_Admin() {
   return (
@@ -31,7 +32,7 @@ function Project_Admin() {
                   <tbody class="[&amp;_tr:last-child]:border-0">
                     <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
                       <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium">
-                        Road Repair and Maintenance
+                        <Link to={`/admin/project_details?id=${123}`} >Road Repair and Maintenance</Link>
                       </td>
                       <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden sm:table-cell">
                         Public Works
@@ -81,7 +82,7 @@ function Project_Admin() {
                     </tr>
                     <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
                       <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium">
-                        Park Renovation and Landscaping
+                        <Link to={`/admin/project_details?id=${153}`} >Park Renovation and Landscaping</Link>
                       </td>
                       <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden sm:table-cell">
                         Parks and Recreation
