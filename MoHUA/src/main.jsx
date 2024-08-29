@@ -23,6 +23,7 @@ import Admin_Profile from './pages/CentralAdmin/Admin_Profile.jsx'
 import Admin_Add_Project from './pages/CentralAdmin/Admin_Add_Project.jsx'
 import Admin_Project_Details from './pages/CentralAdmin/Admin_Project_Details.jsx'
 import Admin_Add_Task from './pages/CentralAdmin/Admin_Add_Task.jsx'
+import Admin_Task_Details from './pages/CentralAdmin/Admin_Task_Details.jsx'
 
 const router = createBrowserRouter([
   {
@@ -79,6 +80,10 @@ const router = createBrowserRouter([
   {
     path: '/admin/addtask',
     element: <Admin_Add_Task />,
+  },
+  {
+    path: '/admin/task_details',
+    element: <Admin_Task_Details/>,
   },
 ]);
 

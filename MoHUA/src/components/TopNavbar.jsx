@@ -21,7 +21,7 @@ function topNavbar() {
             <button className="bg-[#e65100] text-white border border-white px-2">
               A
             </button>
-            <button id="google_translate_element" className="bg-[#e65100] text-white px-2"> </button>
+            <button id="google_translate_element" className="bg-[#e65100] text-white px-2"></button>
           </div>
         </div>
       </div>

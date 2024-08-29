@@ -53,7 +53,10 @@ function Sidebar_Admin() {
           </Link>
         </nav>
         <nav className="mt-auto flex flex-col items-start gap-4 px-2 sm:py-5">
-          <Link className="flex items-center gap-2 p-2 rounded-lg bg-primary text-lg font-semibold text-primary-foreground transition-colors hover:bg-primary-hover">
+          <Link
+            to="/"
+            className="flex items-center gap-2 p-2 rounded-lg bg-primary text-lg font-semibold text-primary-foreground transition-colors hover:bg-primary-hover"
+          >
             <FiLogOut className="h-5 w-5" />
             <span>Logout</span>
           </Link>
