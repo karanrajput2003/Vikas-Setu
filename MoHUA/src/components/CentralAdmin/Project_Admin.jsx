@@ -2,7 +2,7 @@ import React from 'react'
 
 function Project_Admin() {
   return (
-    <main class="grid flex-1 flex-col items-start gap-4 p-4 " style={{ position: 'absolute', top: '180px', left: '100px' }}>
+    <main class="grid flex-1 flex-col items-start p-4 " style={{ position: 'absolute', top: '180px', left: '100px' }}>
         <div class="p-6">
               <div class="">
                 <table class="w-full caption-bottom text-sm">
