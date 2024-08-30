@@ -39,6 +39,19 @@ import Subtask6 from './pages/CentralAdmin/subtasks/Subtask6.jsx'
 
 
 
+
+import Department_Home from './pages/Department/Department_Home.jsx'
+import Department_Project from './pages/Department/Department_Project.jsx'
+import Department_Project_Details from './pages/Department/Department_Project_Details.jsx'
+import Department_Task_Details from './pages/Department/Department_Task_Details.jsx'
+import Department_Task_details2 from './pages/Department/tasks/TaskDetails2.jsx'
+import Department_Task_details4 from './pages/Department/tasks/TaskDetails4.jsx'
+import Department_SubTask_details2 from './pages/Department/subtasks/subtask2.jsx'
+import Department_SubTask_details3 from './pages/Department/subtasks/subtask3.jsx'
+import Department_SubTask_details6 from './pages/Department/subtasks/subtask6.jsx'
+
+
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -146,6 +159,46 @@ const router = createBrowserRouter([
   {
     path: '/admin/subtask_details6',
     element: <Subtask6 />,
+  },
+
+  //
+  {
+    path: '/department',
+    element: <Department_Home />,
+  },
+  {
+    path: '/department/projects',
+    element: <Department_Project />,
+  },
+  {
+    path: '/department/project_details',
+    element: <Department_Project_Details />,
+  },
+
+
+  {
+    path: '/department/task_details',
+    element: <Department_Task_Details />,
+  },
+  {
+    path: '/department/task_details2',
+    element: <Department_Task_details2 />,
+  },  
+  {
+    path: '/department/task_details4',
+    element: <Department_Task_details4 />,
+  },
+  {
+    path: '/department/subtask_details2',
+    element: <Department_SubTask_details2 />,
+  },
+  {
+    path: '/department/subtask_details3',
+    element: <Department_SubTask_details3 />,
+  },
+  {
+    path: '/department/subtask_details6',
+    element: <Department_SubTask_details6 />,
   },
 ]);
 
