@@ -7,7 +7,7 @@ function MainNavbar() {
       <div className="w-full">
         <div className="bg-[#808080] text-white flex justify-between items-center p-2">
           <div className="flex space-x-4">
-            <Link to="/" className="text-sm">
+            <Link to="/department" className="text-sm">
               LLLLL
             </Link>
             <Link to="/contractor" className="text-sm">
