@@ -18,7 +18,7 @@ function ContractorRegister() {
     setErrorMessage("");
   
     try {
-      const response = await fetch("http://localhost:8080/auth/signup", {
+      const response = await fetch("http://localhost:8080/auth/contractor_signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

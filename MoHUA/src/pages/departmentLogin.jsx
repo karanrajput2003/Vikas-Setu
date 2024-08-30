@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import TopNavbar from "../components/TopNavbar";
@@ -11,10 +11,35 @@ function departmentLogin() {
   const { register, handleSubmit } = useForm();
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const navigate = useNavigate();
 
   const onSubmit = async (data) => {
-    console.log(data);
-    // After Successful redirect to dashboard.jsx
+    setIsLoading(true);
+    setErrorMessage("");
+
+    try {
+      const response = await fetch("http://localhost:8080/auth/department_login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        // Redirect to dashboard or any other page after successful login
+        navigate("/dashboard");
+      } else {
+        setErrorMessage(result.message || "Login failed. Please try again.");
+      }
+    } catch (error) {
+      console.error("Login error:", error);
+      setErrorMessage("Server error. Please try again later.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -36,14 +61,14 @@ function departmentLogin() {
                 htmlFor="username"
                 className="block text-sm font-medium leading-6 text-gray-900"
               >
-                Username:
+                Email:
               </label>
               <div className="mt-2">
                 <input
-                  {...register("username")}
-                  type="username"
-                  placeholder="Username"
-                  autoComplete="username"
+                  {...register("email")}
+                  type="email"
+                  placeholder="Email"
+                  autoComplete="email"
                   required
                   className="block w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
