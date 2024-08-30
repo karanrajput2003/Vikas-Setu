@@ -5,6 +5,7 @@ import TopNavbar from "./components/TopNavbar";
 import HomeContent from "./components/HomeContent";
 import MiddleNavbar from "./components/MiddleNavbar";
 import MainNavbar from "./components/MainNavbar";
+import CarouselImage from "./components/CarouselImage";
 import ScreenReaderToggle from "./components/ScreenReaderToggle";
 import GoogleCalendar from "./components/GoogleCalendar";
 import CarouselFooter from "./components/CarouselFooter";
@@ -40,6 +41,7 @@ const App = () => {
           <HomeContent />
           <Latest />
           <Our_Strategy />
+          <CarouselImage />
           {/* <GoogleCalendar /> */}
           <Contact_Page />
           <CarouselFooter />

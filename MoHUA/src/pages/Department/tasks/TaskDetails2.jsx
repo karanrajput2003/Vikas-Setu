@@ -3,6 +3,7 @@ import TopNavbar from "../../../components/TopNavbar";
 import MiddleNavbar from "../../../components/MiddleNavbar";
 import Sidebar_Department from "../../../components/Department/Sidebar_Department";
 import { useParams, Link } from "react-router-dom";
+import TicketSystem from "../../../components/TicketSystem";
 import { CalendarIcon, ClockIcon } from "lucide-react";
 
 
@@ -89,7 +90,8 @@ function TaskDetails2() {
                   <tbody class="[&amp;_tr:last-child]:border-0">
                     <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
                       <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium">
-                      Finalize project plans based on land availability and environmental clearances
+                        Finalize project plans based on land availability and
+                        environmental clearances
                       </td>
                       <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden sm:table-cell">
                         <div
@@ -100,10 +102,10 @@ function TaskDetails2() {
                         </div>
                       </td>
                       <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
-                      National Highways Authority of India (NHAI)
+                        National Highways Authority of India (NHAI)
                       </td>
                       <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
-                      April 2025 - June 2025
+                        April 2025 - June 2025
                       </td>
                       <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
                         <Link
@@ -124,6 +126,10 @@ function TaskDetails2() {
               </div>
             </div>
           </main>
+          <div className="mb-4">
+            <h3 className="font-semibold mb-2">Raise Grievance</h3>
+            <TicketSystem />
+          </div>
         </div>
       </div>
     </>

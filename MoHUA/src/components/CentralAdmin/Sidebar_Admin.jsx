@@ -7,6 +7,7 @@ import { TbReportSearch } from "react-icons/tb";
 import { IoSettings } from "react-icons/io5";
 import { IoMdHelpCircleOutline } from "react-icons/io";
 import { FiLogOut } from "react-icons/fi";
+import { FaExclamationCircle } from "react-icons/fa";
 
 function Sidebar_Admin() {
   return (
@@ -43,6 +44,13 @@ function Sidebar_Admin() {
           >
             <TbReportSearch className="h-5 w-5" />
             <span>Reports</span>
+          </Link>
+          <Link
+            className="flex items-center gap-2 p-2 rounded-lg bg-primary text-lg font-semibold text-primary-foreground transition-colors hover:bg-primary-hover"
+            to="/admin/grievances"
+          >
+            <FaExclamationCircle className="h-5 w-5" />
+            <span>Grievances</span>
           </Link>
           <Link
             className="flex items-center gap-2 p-2 rounded-lg bg-primary text-lg font-semibold text-primary-foreground transition-colors hover:bg-primary-hover"

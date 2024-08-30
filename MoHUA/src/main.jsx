@@ -19,6 +19,7 @@ import Contractor_Home from './pages/Contractor/Contractor_Home.jsx'
 // Admin Pages
 import Admin_Home from './pages/CentralAdmin/Admin_Home.jsx'
 import Admin_Project from './pages/CentralAdmin/Admin_Project.jsx'
+import Admin_Grievances from "./pages/CentralAdmin/Admin_Grievances.jsx";
 import Admin_Profile from './pages/CentralAdmin/Admin_Profile.jsx'
 import Admin_Add_Project from './pages/CentralAdmin/Admin_Add_Project.jsx'
 import Admin_Project_Details from './pages/CentralAdmin/Admin_Project_Details.jsx'
@@ -54,150 +55,150 @@ import Department_SubTask_details6 from './pages/Department/subtasks/subtask6.js
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <App />,
   },
   {
-    path: '/login',
+    path: "/login",
     element: <Login />,
   },
   {
-    path: '/departmentlogin',
+    path: "/departmentlogin",
     element: <DepartmentLogin />,
   },
   {
-    path: '/contractorlogin',
+    path: "/contractorlogin",
     element: <ContractorLogin />,
   },
   {
-    path: '/register',
+    path: "/register",
     element: <ContractorRegister />,
   },
 
-
-
   //  Contractor Routes
   {
-    path: '/contractor',
+    path: "/contractor",
     element: <Contractor_Home />,
   },
 
-
   //  Admin Routes
   {
-    path: '/admin',
+    path: "/admin",
     element: <Admin_Home />,
   },
   {
-    path: '/admin/projects',
+    path: "/admin/projects",
     element: <Admin_Project />,
   },
   {
-    path: '/admin/profile',
+    path: "/admin/grievances",
+    element: <Admin_Grievances />,
+  },
+  {
+    path: "/admin/profile",
     element: <Admin_Profile />,
   },
   {
-    path: '/admin/addproject',
+    path: "/admin/addproject",
     element: <Admin_Add_Project />,
   },
   {
-    path: '/admin/project_details',
+    path: "/admin/project_details",
     element: <Admin_Project_Details />,
   },
   {
-    path: '/admin/addtask',
+    path: "/admin/addtask",
     element: <Admin_Add_Task />,
   },
   {
-    path: '/admin/task_details',
+    path: "/admin/task_details",
     element: <Admin_Task_Details />,
   },
   {
-    path: '/admin/task_details2',
+    path: "/admin/task_details2",
     element: <Task_details2 />,
   },
   {
-    path: '/admin/task_details3',
+    path: "/admin/task_details3",
     element: <Task_details3 />,
   },
   {
-    path: '/admin/task_details4',
+    path: "/admin/task_details4",
     element: <Task_details4 />,
   },
   {
-    path: '/admin/task_details5',
+    path: "/admin/task_details5",
     element: <Task_details5 />,
   },
   {
-    path: '/admin/task_details6',
+    path: "/admin/task_details6",
     element: <Task_details6 />,
   },
   {
-    path: '/admin/task_details7',
+    path: "/admin/task_details7",
     element: <Task_details7 />,
   },
   {
-    path: '/admin/subtask_details1',
+    path: "/admin/subtask_details1",
     element: <Subtask1 />,
   },
   {
-    path: '/admin/subtask_details2',
+    path: "/admin/subtask_details2",
     element: <Subtask2 />,
-  }, 
+  },
   {
-    path: '/admin/subtask_details3',
+    path: "/admin/subtask_details3",
     element: <Subtask3 />,
-  }, 
+  },
   {
-    path: '/admin/subtask_details4',
+    path: "/admin/subtask_details4",
     element: <Subtask4 />,
-  }, 
+  },
   {
-    path: '/admin/subtask_details5',
+    path: "/admin/subtask_details5",
     element: <Subtask5 />,
-  }, 
+  },
   {
-    path: '/admin/subtask_details6',
+    path: "/admin/subtask_details6",
     element: <Subtask6 />,
   },
 
   //
   {
-    path: '/department',
+    path: "/department",
     element: <Department_Home />,
   },
   {
-    path: '/department/projects',
+    path: "/department/projects",
     element: <Department_Project />,
   },
   {
-    path: '/department/project_details',
+    path: "/department/project_details",
     element: <Department_Project_Details />,
   },
 
-
   {
-    path: '/department/task_details',
+    path: "/department/task_details",
     element: <Department_Task_Details />,
   },
   {
-    path: '/department/task_details2',
+    path: "/department/task_details2",
     element: <Department_Task_details2 />,
-  },  
+  },
   {
-    path: '/department/task_details4',
+    path: "/department/task_details4",
     element: <Department_Task_details4 />,
   },
   {
-    path: '/department/subtask_details2',
+    path: "/department/subtask_details2",
     element: <Department_SubTask_details2 />,
   },
   {
-    path: '/department/subtask_details3',
+    path: "/department/subtask_details3",
     element: <Department_SubTask_details3 />,
   },
   {
-    path: '/department/subtask_details6',
+    path: "/department/subtask_details6",
     element: <Department_SubTask_details6 />,
   },
 ]);
