@@ -17,7 +17,7 @@ function Admin_Home() {
         data-v0-t="card"
         style={{
           position: "absolute",
-          left: "200px",
+          left: "260px",
           top: "250px",
           width: "500px",
         }}
@@ -50,22 +50,22 @@ function Admin_Home() {
         <div class="p-6 grid gap-4">
           <div class="grid grid-cols-2 gap-4">
             <div class="bg-accent rounded-lg p-4">
-              <div class="text-sm font-semibold">Active Projects</div>
-              <div class="text-4xl font-bold">12</div>
+              <div class="text-sm font-semibold">Total Projects</div>
+              <div class="text-4xl font-bold">1</div>
             </div>
             <div class="bg-accent rounded-lg p-4">
               <div class="text-sm font-semibold">Completed Projects</div>
-              <div class="text-4xl font-bold">8</div>
+              <div class="text-4xl font-bold">0</div>
             </div>
           </div>
           <div class="grid grid-cols-2 gap-4">
             <div class="bg-accent rounded-lg p-4">
-              <div class="text-sm font-semibold">On-Time Projects</div>
-              <div class="text-4xl font-bold">10</div>
+              <div class="text-sm font-semibold">Ongoing Projects</div>
+              <div class="text-4xl font-bold">1</div>
             </div>
             <div class="bg-accent rounded-lg p-4">
-              <div class="text-sm font-semibold">Overdue Projects</div>
-              <div class="text-4xl font-bold">2</div>
+              <div class="text-sm font-semibold">Upcoming</div>
+              <div class="text-4xl font-bold">0</div>
             </div>
           </div>
         </div>
@@ -101,21 +101,21 @@ function Admin_Home() {
         <div class="grid grid-cols-2 gap-4">
           <div class="bg-accent rounded-lg p-4">
             <div class="text-sm font-semibold">Total Tasks</div>
-            <div class="text-4xl font-bold">142</div>
+            <div class="text-4xl font-bold">20</div>
           </div>
           <div class="bg-accent rounded-lg p-4">
             <div class="text-sm font-semibold">Completed Tasks</div>
-            <div class="text-4xl font-bold">98</div>
+            <div class="text-4xl font-bold">3</div>
           </div>
         </div>
         <div class="grid grid-cols-2 gap-4">
           <div class="bg-accent rounded-lg p-4">
-            <div class="text-sm font-semibold">High Priority Tasks</div>
-            <div class="text-4xl font-bold">24</div>
+            <div class="text-sm font-semibold">Ongoing</div>
+            <div class="text-4xl font-bold">3</div>
           </div>
           <div class="bg-accent rounded-lg p-4">
-            <div class="text-sm font-semibold">Overdue Tasks</div>
-            <div class="text-4xl font-bold">12</div>
+            <div class="text-sm font-semibold">Upcoming</div>
+            <div class="text-4xl font-bold">14</div>
           </div>
         </div>
       </div>

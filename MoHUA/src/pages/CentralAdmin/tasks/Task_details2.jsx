@@ -1,28 +1,24 @@
 import React, { useState, useEffect } from "react";
-import TopNavbar from "../../components/TopNavbar";
-import MiddleNavbar from "../../components/MiddleNavbar";
-import Sidebar_Admin from "../../components/CentralAdmin/Sidebar_Admin";
-import Header_Admin from "../../components/CentralAdmin/Header_Admin";
+import TopNavbar from "../../../components/TopNavbar";
+import MiddleNavbar from "../../../components/MiddleNavbar";
+import Sidebar_Admin from "../../../components/CentralAdmin/Sidebar_Admin";
 import { useParams, Link } from "react-router-dom";
-import Task_Header_Admin from "../../components/CentralAdmin/Task_Header_Admin";
 import { CalendarIcon, ClockIcon } from "lucide-react";
-import Hardcodeimg from "../../assets/hardcode_images/road-construction.jpg";
-import Hardcode from "../../assets/hardcode_images/KK.jpg";
 
 
 // G Map
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 
-function Admin_Task_Details() {
+function Task_details2() {
   const [project, setProject] = useState(null);
   const { id } = useParams();
   const projectData = {
-    name: "Project Planning & Initiation",
+    name: "Land Acquisition & Environmental Clearances",
     description:
       "Launching our revolutionary new product line across multiple markets. Launching our revolutionary new product line across multiple markets. Launching our revolutionary new product line across multiple markets. ",
-    startDate: "January 1, 2024",
-    endDate: "June 30, 2024",
-    status: "Completed",
+    startDate: "July 1, 2024",
+    endDate: "June 30, 2025",
+    status: "Ongoing",
   };
 
   return (
@@ -110,89 +106,89 @@ function Admin_Task_Details() {
                   <tbody class="[&amp;_tr:last-child]:border-0">
                     <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
                       <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium">
-                        Project conceptualization, budgeting, policy formulation
+                      Complete land acquisition, compensation distribution.
                       </td>
                       <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden sm:table-cell">
                         <div
                           class="inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground"
                           data-v0-t="badge"
                         >
-                          Completed
-                        </div>
-                      </td>
-                      <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
-                      Ministry of Road Transport and Highways (MoRTH)
-                      </td>
-                      <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
-                        January 2024 - February 2024
-                      </td>
-                      <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
-                        <Link
-                          to="/admin/subtask_details1"
-                          class="text-indigo-600 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10"
-                          aria-haspopup="true"
-                          type="button"
-                          id="radix-:r17:"
-                          aria-expanded="false"
-                          data-state="closed"
-                        >
-                          View
-                        </Link>
-                      </td>
-                    </tr>
-                    <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
-                      <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium">
-                      Conduct feasibility studies, route alignment, project tendering
-                      </td>
-                      <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden sm:table-cell">
-                        <div
-                          class="inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground"
-                          data-v0-t="badge"
-                        >
-                          Completed
-                        </div>
-                      </td>
-                      <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
-                      National Highways Authority of India (NHAI)
-                      </td>
-                      <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
-                      March 2025 - June 2025  
-                      </td>
-                      <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
-                        <Link
-                          to="/admin/subtask_details2"
-                          class="text-indigo-600 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10"
-                          aria-haspopup="true"
-                          type="button"
-                          id="radix-:r17:"
-                          aria-expanded="false"
-                          data-state="closed"
-                        >
-                          View
-                        </Link>
-                      </td>
-                    </tr>
-                    <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
-                      <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium">
-                      Preliminary land surveys, initiation of land acquisition process
-                      </td>
-                      <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden sm:table-cell">
-                        <div
-                          class="inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground"
-                          data-v0-t="badge"
-                        >
-                          Completed
+                          Ongoing
                         </div>
                       </td>
                       <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
                       Land Acquisition Department
                       </td>
                       <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
+                      July 2024 - December 2024
+                      </td>
+                      <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
+                        <Link
+                          to="/admin/subtask_details4"
+                          class="text-indigo-600 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10"
+                          aria-haspopup="true"
+                          type="button"
+                          id="radix-:r17:"
+                          aria-expanded="false"
+                          data-state="closed"
+                        >
+                          View
+                        </Link>
+                      </td>
+                    </tr>
+                    <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                      <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium">
+                      Conduct Environmental Impact Assessments (EIA), obtain necessary clearances.
+                      </td>
+                      <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden sm:table-cell">
+                        <div
+                          class="inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground"
+                          data-v0-t="badge"
+                        >
+                          Ongoing
+                        </div>
+                      </td>
+                      <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
+                      Forest and Environment Departments
+                      </td>
+                      <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
+                      July 2024 - March 2025
+                      </td>
+                      <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
+                        <Link
+                          to="/admin/subtask_details5"
+                          class="text-indigo-600 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10"
+                          aria-haspopup="true"
+                          type="button"
+                          id="radix-:r17:"
+                          aria-expanded="false"
+                          data-state="closed"
+                        >
+                          View
+                        </Link>
+                      </td>
+                    </tr>
+                    <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                      <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium">
+                      Finalize project plans based on land availability and environmental clearances
+                      </td>
+                      <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden sm:table-cell">
+                        <div
+                          class="inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground"
+                          data-v0-t="badge"
+                        >
+                          Ongoing
+                        </div>
+                      </td>
+                      <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
+                      National Highways Authority of India (NHAI)
+                      </td>
+                      <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
                       April 2025 - June 2025
                       </td>
                       <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
                         <Link
-                          to="/admin/subtask_details3"
+                          to="/admin/subtask_details6"
                           class="text-indigo-600 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10"
                           aria-haspopup="true"
                           type="button"
@@ -215,4 +211,4 @@ function Admin_Task_Details() {
   );
 }
 
-export default Admin_Task_Details;
+export default Task_details2;

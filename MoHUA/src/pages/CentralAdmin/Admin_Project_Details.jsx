@@ -15,14 +15,15 @@ function Admin_Project_Details() {
   const [project, setProject] = useState(null);
   const { id } = useParams();
   const projectData = {
-    name: "New Product Launch",
+    name: "Delhi-Mumbai Expressway",
     description:
       "Launching our revolutionary new product line across multiple markets. Launching our revolutionary new product line across multiple markets. Launching our revolutionary new product line across multiple markets. ",
+    department: "Ministry of Road Transport and Highways (MoRTH)",
     location: "Global",
-    startDate: "2023-07-01",
-    endDate: "2024-06-30",
-    budget: "$1,000,000",
-    status: "Ongoing",
+    startDate: "2024-01-01",
+    endDate: "2029-01-01",
+    budget: "₹1,00,000 Crores",
+    status: "Upcoming",
   };
 
   useEffect(() => {
@@ -47,7 +48,7 @@ function Admin_Project_Details() {
       <Sidebar_Admin />
       <header
         class="sticky top-0 z-30 flex h-14 items-center gap-4 border-b bg-background px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6"
-        style={{ position: "absolute", top: "180px", left: "120px" }}
+        style={{ position: "absolute", top: "180px", left: "190px" }}
       >
         <div class="flex items-center">
           <div class="ml-auto flex items-center gap-2">
@@ -70,7 +71,7 @@ function Admin_Project_Details() {
           <div className="px-6 py-4">
             <h2 className="text-2xl font-bold mb-2">{projectData.name}</h2>
             <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
-              {projectData.status}
+              {projectData.department}
             </span>
           </div>
           <h3 className="font-semibold mb-2">Project Location</h3>
@@ -109,14 +110,11 @@ function Admin_Project_Details() {
         <main class="grid flex-1 flex-col items-start p-4 ">
           <div class="p-6">
             <div class="">
-              <table class="w-full caption-bottom text-sm">
+              <table class="caption-bottom text-sm">
                 <thead class="[&amp;_tr]:border-b">
                   <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
                     <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0">
                       Tasks
-                    </th>
-                    <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0 hidden sm:table-cell">
-                      Department
                     </th>
                     <th class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0 hidden sm:table-cell">
                       Status
@@ -135,24 +133,21 @@ function Admin_Project_Details() {
                 <tbody class="[&amp;_tr:last-child]:border-0">
                   <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium">
-                      Road Repair and Maintenance
-                    </td>
-                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden sm:table-cell">
-                      Public Works
+                    Project Planning & Initiation
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden sm:table-cell">
                       <div
                         class="inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground"
                         data-v0-t="badge"
                       >
-                        Ongoing
+                        Completed
                       </div>
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
-                      2023-04-01
+                    January 1, 2024
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
-                      2023-09-30
+                    June 30, 2024
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
                       <Link
@@ -170,10 +165,39 @@ function Admin_Project_Details() {
                   </tr>
                   <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium">
-                      Park Renovation and Landscaping
+                    Land Acquisition & Environmental Clearances
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden sm:table-cell">
-                      Parks and Recreation
+                      <div
+                        class="inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground"
+                        data-v0-t="badge"
+                      >
+                        Ongoing
+                      </div>
+                    </td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
+                    July 1, 2024
+                    </td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
+                    June 30, 2025
+                    </td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
+                      <Link
+                        to="/admin/task_details2"
+                        class="text-indigo-600 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10"
+                        aria-haspopup="true"
+                        type="button"
+                        id="radix-:r17:"
+                        aria-expanded="false"
+                        data-state="closed"
+                      >
+                        View
+                      </Link>
+                    </td>
+                  </tr>
+                  <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium">
+                    Pre-Construction Activities
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden sm:table-cell">
                       <div
@@ -184,14 +208,142 @@ function Admin_Project_Details() {
                       </div>
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
-                      2023-07-01
+                    July 1, 2025
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
-                      2024-06-30
+                    December 31, 2026
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
                       <Link
-                        to={`/admin/task_details?id=${123}`}
+                         to="/admin/task_details3"
+                        class="text-indigo-600 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10"
+                        aria-haspopup="true"
+                        type="button"
+                        id="radix-:r17:"
+                        aria-expanded="false"
+                        data-state="closed"
+                      >
+                        View
+                      </Link>
+                    </td>
+                  </tr>
+                  <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium">
+                    Main Construction Phase
+                    </td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden sm:table-cell">
+                      <div
+                        class="inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground"
+                        data-v0-t="badge"
+                      >
+                        Upcoming
+                      </div>
+                    </td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
+                    January 1, 2026
+                    </td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
+                    December 31, 2027
+                    </td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
+                      <Link
+                         to="/admin/task_details4"
+                        class="text-indigo-600 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10"
+                        aria-haspopup="true"
+                        type="button"
+                        id="radix-:r17:"
+                        aria-expanded="false"
+                        data-state="closed"
+                      >
+                        View
+                      </Link>
+                    </td>
+                  </tr>
+                  <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium">
+                    Finalization & Quality Checks
+                    </td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden sm:table-cell">
+                      <div
+                        class="inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground"
+                        data-v0-t="badge"
+                      >
+                        Upcoming
+                      </div>
+                    </td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
+                    January 1, 2028
+                    </td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
+                    June 30, 2028
+                    </td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
+                      <Link
+                         to="/admin/task_details5"
+                        class="text-indigo-600 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10"
+                        aria-haspopup="true"
+                        type="button"
+                        id="radix-:r17:"
+                        aria-expanded="false"
+                        data-state="closed"
+                      >
+                        View
+                      </Link>
+                    </td>
+                  </tr>
+                  <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium">
+                    Integration & Handover
+                    </td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden sm:table-cell">
+                      <div
+                        class="inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground"
+                        data-v0-t="badge"
+                      >
+                        Upcoming
+                      </div>
+                    </td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
+                    July 1, 2028
+                    </td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
+                    December 31, 2028
+                    </td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
+                      <Link
+                         to="/admin/task_details6"
+                        class="text-indigo-600 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10"
+                        aria-haspopup="true"
+                        type="button"
+                        id="radix-:r17:"
+                        aria-expanded="false"
+                        data-state="closed"
+                      >
+                        View
+                      </Link>
+                    </td>
+                  </tr>
+                  <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium">
+                    Highway Inauguration & Operation
+                    </td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden sm:table-cell">
+                      <div
+                        class="inline-flex w-fit items-center whitespace-nowrap rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-foreground"
+                        data-v0-t="badge"
+                      >
+                        Upcoming
+                      </div>
+                    </td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
+                    January 1, 2030
+                    </td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
+                    -
+                    </td>
+                    <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
+                      <Link
+                         to="/admin/task_details7"
                         class="text-indigo-600 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10"
                         aria-haspopup="true"
                         type="button"

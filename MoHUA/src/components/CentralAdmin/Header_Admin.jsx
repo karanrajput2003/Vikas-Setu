@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function Header_Admin() {
   return (
-    <header class="sticky top-0 z-30 flex h-14 items-center gap-4 border-b bg-background px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6" style={{ position: 'absolute', top: '180px', left: '120px' }}>
+    <header  class="sticky top-0 z-30 flex h-14 items-center gap-4 border-b bg-background px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6" style={{ position: 'absolute', top: '180px', left: '350px' }}>
               <div class="flex items-center">
           <div class="ml-auto flex items-center gap-2">
             <Link to='/admin/addproject' class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 rounded-md px-3 h-8 gap-1">
@@ -11,7 +11,7 @@ function Header_Admin() {
             </Link >
           </div>
         </div>
-      <div class="relative ml-auto flex-1 md:grow-0">
+      {/* <div class="relative ml-auto flex-1 md:grow-0">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -32,23 +32,7 @@ function Header_Admin() {
           placeholder="Search projects..."
           type="search"
         />
-      </div>
-      {/* <button
-        class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10 overflow-hidden rounded-full"
-        type="button"
-        id="radix-:ru:"
-        aria-haspopup="menu"
-        aria-expanded="false"
-        data-state="closed"
-      >
-        <img
-          src="/placeholder.svg"
-          width="36"
-          height="36"
-          alt="Avatar"
-          class="overflow-hidden rounded-full"
-        />
-      </button> */}
+      </div> */}
     </header>
 
   )

@@ -12,7 +12,7 @@ function Sidebar_Admin() {
   return (
     <>
       <aside
-        className="left-0 z-10 hidden w-32 flex-col border-r bg-background sm:flex"
+        className="left-10 z-10 hidden w-48 flex-col border-r bg-background sm:flex"
         style={{ top: "157px" }}
       >
         <nav className="flex flex-col items-start gap-4 px-2 sm:py-5">
