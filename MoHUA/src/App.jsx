@@ -9,8 +9,14 @@ import ScreenReaderToggle from "./components/ScreenReaderToggle";
 import GoogleCalendar from "./components/GoogleCalendar";
 import CarouselFooter from "./components/CarouselFooter";
 import Footer from "./components/Footer";
+import Latest from "./components/latext";
+import Our_Strategy from "./components/Our_Strategy";
+import Contact_Page from "./components/Contact_Me";
 
-function App() {
+const App = () => {
+  const pageStyle = {
+    fontFamily: 'Arial, sans-serif', // Replace with your desired font
+  };
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -22,7 +28,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div style={pageStyle}>
       {loading ? (
         <LoadingSpinner /> 
       ) : (
@@ -32,12 +38,15 @@ function App() {
           <MiddleNavbar />
           <MainNavbar />
           <HomeContent />
-          <GoogleCalendar />
+          <Latest />
+          <Our_Strategy />
+          {/* <GoogleCalendar /> */}
+          <Contact_Page />
           <CarouselFooter />
           <Footer />
         </>
       )}
-    </>
+    </div>
   );
 }
 

@@ -3,34 +3,32 @@ import { Link } from "react-router-dom";
 
 function MainNavbar() {
   return (
-    <>
-      <div className="w-full">
-        <div className="bg-[#808080] text-white flex justify-between items-center p-2">
-          <div className="flex space-x-4">
-            <Link to="/department" className="text-sm">
-              LLLLL
-            </Link>
-            <Link to="/contractor" className="text-sm">
-              FFFFF
-            </Link>
-            <Link to="/admin" className="text-sm">
-              KKKKK
-            </Link>
-          </div>
-          <div className="flex space-x-2">
-            <Link to="/login" className="text-sm">
-              Central Login
-            </Link>
-            <Link to="/departmentlogin" className="text-sm">
-              Department Login
-            </Link>
-            <Link to="/contractorlogin" className="text-sm">
-              Contractor Login
-            </Link>
-          </div>
+    <div className="w-full">
+      <div className="bg-white/30 backdrop-blur-lg text-black flex justify-between items-center p-4 shadow-md">
+        <div className="flex space-x-6">
+          <Link to="/department" className="text-sm font-medium hover:text-red-500 transition-colors">
+            Department
+          </Link>
+          <Link to="/contractor" className="text-sm font-medium hover:text-red-500 transition-colors">
+            Contractor
+          </Link>
+          <Link to="/admin" className="text-sm font-medium hover:text-red-500 transition-colors">
+            Admin
+          </Link>
+        </div>
+        <div className="flex space-x-4">
+          <Link to="/login" className="text-sm font-medium hover:text-red-500 transition-colors">
+            Central Login
+          </Link>
+          <Link to="/departmentlogin" className="text-sm font-medium hover:text-red-500 transition-colors">
+            Department Login
+          </Link>
+          <Link to="/contractorlogin" className="text-sm font-medium hover:text-red-500 transition-colors">
+            Contractor Login
+          </Link>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
