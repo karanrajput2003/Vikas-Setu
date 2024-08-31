@@ -10,10 +10,13 @@ app.use(cors());
 db.set("strictQuery", false);
 
 // MongoDB connection
-db.connect("mongodb+srv://crce9544now:crce9544@clusternow.lnfgy.mongodb.net", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+db.connect(
+  "mongodb+srv://crce9544now:crce9544@clusternow.lnfgy.mongodb.net/ticket",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+)
   .then(() => console.log("MongoDB is connected"))
   .catch((err) => console.log(err));
 

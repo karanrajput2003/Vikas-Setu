@@ -4,6 +4,7 @@ import MiddleNavbar from "../../../components/MiddleNavbar";
 import Sidebar_Admin from "../../../components/CentralAdmin/Sidebar_Admin";
 import { useParams, Link } from "react-router-dom";
 import { CalendarIcon, ClockIcon } from "lucide-react";
+import GrievanceList from "../../../components/GrievanceList";
 
 
 // G Map
@@ -204,6 +205,7 @@ function Task_details2() {
                 </table>
               </div>
             </div>
+            <GrievanceList />
           </main>
         </div>
       </div>
