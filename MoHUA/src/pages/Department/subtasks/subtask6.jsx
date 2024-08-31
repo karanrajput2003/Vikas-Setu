@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
 import TopNavbar from "../../../components/TopNavbar";
 import MiddleNavbar from "../../../components/MiddleNavbar";
-import Sidebar_Admin from "../../../components/CentralAdmin/Sidebar_Admin";
+import Sidebar_Department from "../../../components/Department/Sidebar_Department";
 import Header_Admin from "../../../components/CentralAdmin/Header_Admin";
 import { useParams, Link } from "react-router-dom";
 import Task_Header_Admin from "../../../components/CentralAdmin/Task_Header_Admin";
 import { CalendarIcon, ClockIcon } from "lucide-react";
 import Hardcodeimg from "../../../assets/hardcode_images/road-construction.jpg";
 import Hardcode from "../../../assets/hardcode_images/KK.jpg";
-
 
 // G Map
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
@@ -23,14 +22,14 @@ function subtask6() {
     startDate: "January 1, 2024",
     endDate: "June 30, 2024",
     status: "Ongoing",
-    department: "National Highways Authority of India (NHAI)"
+    department: "National Highways Authority of India (NHAI)",
   };
 
   return (
     <>
       <TopNavbar />
       <MiddleNavbar />
-      <Sidebar_Admin />
+      <Sidebar_Department />
       <div
         className="max-w-3xl mx-auto bg-white"
         style={{ position: "relative", top: "-380px" }}
@@ -55,7 +54,9 @@ function subtask6() {
             </div>
           </div>
 
-          <h3 className="font-semibold mt-4">Images / Documents Related to the Task</h3>
+          <h3 className="font-semibold mt-4">
+            Images / Documents Related to the Task
+          </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-4">
             <div>
               <img src={Hardcodeimg}></img>
