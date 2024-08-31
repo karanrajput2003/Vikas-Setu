@@ -6,10 +6,10 @@ import Header_Admin from "../../components/CentralAdmin/Header_Admin";
 import { useParams, Link } from "react-router-dom";
 import Task_Header_Admin from "../../components/CentralAdmin/Task_Header_Admin";
 import { CalendarIcon, ClockIcon } from "lucide-react";
+import map from "../../assets/map.png";
 
 // G Map
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
-
 
 function Admin_Project_Details() {
   const [project, setProject] = useState(null);
@@ -75,7 +75,7 @@ function Admin_Project_Details() {
             </span>
           </div>
           <h3 className="font-semibold mb-2">Project Location</h3>
-          <LoadScript googleMapsApiKey="YOUR_API_KEY">
+          {/* <LoadScript googleMapsApiKey="YOUR_API_KEY">
             <GoogleMap
               mapContainerClassName="w-full h-64 rounded-lg"
               center={{ lat: 40.7128, lng: -74.006 }} // New York coordinates
@@ -83,7 +83,10 @@ function Admin_Project_Details() {
             >
               <Marker position={{ lat: 40.7128, lng: -74.006 }} />
             </GoogleMap>
-          </LoadScript>
+          </LoadScript> */}
+          <Link to="https://www.google.com/maps/place/Delhi+-+Mumbai+Expy/@21.0541683,73.0535835,14.38z/data=!4m6!3m5!1s0x3be03916c2847f7d:0x6cddc58fbf14207c!8m2!3d21.0521522!4d73.0546788!16s%2Fg%2F11f5l8m367?entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D">
+            <img src={map} className="rounded-lg" />
+          </Link>
         </div>
         <div className="px-6 py-4">
           <div className="mb-4">
@@ -133,7 +136,7 @@ function Admin_Project_Details() {
                 <tbody class="[&amp;_tr:last-child]:border-0">
                   <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium">
-                    Project Planning & Initiation
+                      Project Planning & Initiation
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden sm:table-cell">
                       <div
@@ -144,10 +147,10 @@ function Admin_Project_Details() {
                       </div>
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
-                    January 1, 2024
+                      January 1, 2024
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
-                    June 30, 2024
+                      June 30, 2024
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
                       <Link
@@ -165,7 +168,7 @@ function Admin_Project_Details() {
                   </tr>
                   <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium">
-                    Land Acquisition & Environmental Clearances
+                      Land Acquisition & Environmental Clearances
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden sm:table-cell">
                       <div
@@ -176,10 +179,10 @@ function Admin_Project_Details() {
                       </div>
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
-                    July 1, 2024
+                      July 1, 2024
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
-                    June 30, 2025
+                      June 30, 2025
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
                       <Link
@@ -197,7 +200,7 @@ function Admin_Project_Details() {
                   </tr>
                   <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium">
-                    Pre-Construction Activities
+                      Pre-Construction Activities
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden sm:table-cell">
                       <div
@@ -208,14 +211,14 @@ function Admin_Project_Details() {
                       </div>
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
-                    July 1, 2025
+                      July 1, 2025
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
-                    December 31, 2026
+                      December 31, 2026
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
                       <Link
-                         to="/admin/task_details3"
+                        to="/admin/task_details3"
                         class="text-indigo-600 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10"
                         aria-haspopup="true"
                         type="button"
@@ -229,7 +232,7 @@ function Admin_Project_Details() {
                   </tr>
                   <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium">
-                    Main Construction Phase
+                      Main Construction Phase
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden sm:table-cell">
                       <div
@@ -240,14 +243,14 @@ function Admin_Project_Details() {
                       </div>
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
-                    January 1, 2026
+                      January 1, 2026
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
-                    December 31, 2027
+                      December 31, 2027
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
                       <Link
-                         to="/admin/task_details4"
+                        to="/admin/task_details4"
                         class="text-indigo-600 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10"
                         aria-haspopup="true"
                         type="button"
@@ -261,7 +264,7 @@ function Admin_Project_Details() {
                   </tr>
                   <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium">
-                    Finalization & Quality Checks
+                      Finalization & Quality Checks
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden sm:table-cell">
                       <div
@@ -272,14 +275,14 @@ function Admin_Project_Details() {
                       </div>
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
-                    January 1, 2028
+                      January 1, 2028
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
-                    June 30, 2028
+                      June 30, 2028
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
                       <Link
-                         to="/admin/task_details5"
+                        to="/admin/task_details5"
                         class="text-indigo-600 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10"
                         aria-haspopup="true"
                         type="button"
@@ -293,7 +296,7 @@ function Admin_Project_Details() {
                   </tr>
                   <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium">
-                    Integration & Handover
+                      Integration & Handover
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden sm:table-cell">
                       <div
@@ -304,14 +307,14 @@ function Admin_Project_Details() {
                       </div>
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
-                    July 1, 2028
+                      July 1, 2028
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
-                    December 31, 2028
+                      December 31, 2028
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
                       <Link
-                         to="/admin/task_details6"
+                        to="/admin/task_details6"
                         class="text-indigo-600 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10"
                         aria-haspopup="true"
                         type="button"
@@ -325,7 +328,7 @@ function Admin_Project_Details() {
                   </tr>
                   <tr class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium">
-                    Highway Inauguration & Operation
+                      Highway Inauguration & Operation
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden sm:table-cell">
                       <div
@@ -336,14 +339,14 @@ function Admin_Project_Details() {
                       </div>
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
-                    January 1, 2030
+                      January 1, 2030
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 hidden md:table-cell">
-                    -
+                      -
                     </td>
                     <td class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0">
                       <Link
-                         to="/admin/task_details7"
+                        to="/admin/task_details7"
                         class="text-indigo-600 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10"
                         aria-haspopup="true"
                         type="button"
