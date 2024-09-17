@@ -30,19 +30,19 @@ function ProjectManager_Tasks() {
       <div className="w-full bg-white shadow-md py-4">
         <div className="flex justify-center space-x-8 text-lg font-semibold">
           <Link
-            to="/field_officer"
+            to="/projectmanager"
             className="hover:text-blue-600 transition duration-300"
           >
             Dashboard
           </Link>
           <Link
-            to="/field_officer/tasks"
+            to="/projectmanager/tasks"
             className="hover:text-blue-600 transition duration-300"
           >
             My Tasks
           </Link>
           <Link
-            to="/field_officer/profile"
+            to="/projectmanager/profile"
             className="hover:text-blue-600 transition duration-300"
           >
             Profile
@@ -66,7 +66,7 @@ function ProjectManager_Tasks() {
               <tbody className="text-gray-700">
                 <tr className="border-b transition-colors hover:bg-gray-100">
                   <td className="py-4 px-4 font-medium text-blue-600">
-                    <Link to={`/field_officer/task_details?id=${123}`}>
+                    <Link to={`/projectmanager/task_details?id=${123}`}>
                       Land Acquisition & Environmental Clearances
                     </Link>
                   </td>
@@ -80,7 +80,7 @@ function ProjectManager_Tasks() {
                   </td>
                   <td className="py-4 px-4 text-center">
                     <Link
-                      to={`/field_officer/task_details?id=${123}`}
+                      to={`/projectmanager/task_details?id=${124}`}
                       className="text-indigo-600 hover:text-indigo-800"
                     >
                       View
@@ -89,7 +89,7 @@ function ProjectManager_Tasks() {
                 </tr>
                 <tr className="border-b transition-colors hover:bg-gray-100">
                   <td className="py-4 px-4 font-medium text-blue-600">
-                    <Link to={`/field_officer/task_details?id=${124}`}>
+                    <Link to={`/projectmanager/task_details?id=${124}`}>
                       Delhi-Mumbai Expressway
                     </Link>
                   </td>
@@ -103,7 +103,7 @@ function ProjectManager_Tasks() {
                   </td>
                   <td className="py-4 px-4 text-center">
                     <Link
-                      to={`/field_officer/task_details?id=${124}`}
+                      to={`/projectmanager/task_details?id=${124}`}
                       className="text-indigo-600 hover:text-indigo-800"
                     >
                       View

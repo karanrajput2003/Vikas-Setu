@@ -26,13 +26,13 @@ function ProjectManager_Profile() {
       {/* Navigation Section */}
       <div className="w-full bg-white shadow-md py-4">
         <div className="flex justify-center space-x-8 text-lg font-semibold">
-          <Link to="/field_officer" className="hover:text-blue-600 transition duration-300">
+          <Link to="/projectmanager" className="hover:text-blue-600 transition duration-300">
             Dashboard
           </Link>
-          <Link to="/field_officer/tasks" className="hover:text-blue-600 transition duration-300">
+          <Link to="/projectmanager/tasks" className="hover:text-blue-600 transition duration-300">
             My Tasks
           </Link>
-          <Link to="/field_officer/profile" className="hover:text-blue-600 transition duration-300">
+          <Link to="/projectmanager/profile" className="hover:text-blue-600 transition duration-300">
             Profile
           </Link>
         </div>

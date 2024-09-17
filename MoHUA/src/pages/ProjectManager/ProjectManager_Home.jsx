@@ -30,19 +30,19 @@ function ProjectManager_Home() {
       <div className="w-full bg-white shadow-md py-4">
         <div className="flex justify-center space-x-8 text-lg font-semibold">
           <Link
-            to="/field_officer"
+            to="/projectmanager"
             className="hover:text-blue-600 transition duration-300"
           >
             Dashboard
           </Link>
           <Link
-            to="/field_officer/tasks"
+            to="/projectmanager/tasks"
             className="hover:text-blue-600 transition duration-300"
           >
             My Tasks
           </Link>
           <Link
-            to="/field_officer/profile"
+            to="/projectmanager/profile"
             className="hover:text-blue-600 transition duration-300"
           >
             Profile

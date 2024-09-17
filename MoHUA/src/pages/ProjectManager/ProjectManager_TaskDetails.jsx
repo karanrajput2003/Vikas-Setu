@@ -4,11 +4,13 @@ import { useForm } from "react-hook-form";
 import logo_main from "../../assets/logo_main.png";
 import MoHUA_Logo from "../../assets/MoHUA_LOGO.png";
 import All from "../../assets/header-logo.png";
-import departmentLogin from "../departmentLogin";
+import { Send } from 'lucide-react';
 
-function ProjectManager_TaskDetails() {
+function ProjectManager_TaskDetail() {
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
   const [uploadedFiles, setUploadedFiles] = useState([]);
+  const [messages, setMessages] = useState([]);
+  const [newMessage, setNewMessage] = useState('');
   
   const projectData = {
     name: "Land Acquisition & Environmental Clearances",
@@ -25,9 +27,26 @@ function ProjectManager_TaskDetails() {
 
   // Handle form submission
   const onSubmit = (data) => {
-    const files = Array.from(data.documents);
+    const files = Array.from(data.documents).map(file => ({
+      file,
+      uploadDate: currentDate
+    }));
     setUploadedFiles(files);
     reset();
+  };
+
+  const sendMessage = () => {
+    if (newMessage.trim()) {
+      setMessages([
+        ...messages,
+        {
+          sender: 'Manager', // This should be dynamic based on the user role
+          content: newMessage,
+          timestamp: new Date(),
+        },
+      ]);
+      setNewMessage('');
+    }
   };
 
   return (
@@ -55,19 +74,19 @@ function ProjectManager_TaskDetails() {
       <div className="w-full bg-white shadow-md py-4">
         <div className="flex justify-center space-x-8 text-lg font-semibold">
           <Link
-            to="/field_officer"
+            to="/projectmanager"
             className="hover:text-blue-600 transition duration-300"
           >
             Dashboard
           </Link>
           <Link
-            to="/field_officer/tasks"
+            to="/projectmanager/tasks"
             className="hover:text-blue-600 transition duration-300"
           >
             My Tasks
           </Link>
           <Link
-            to="/field_officer/profile"
+            to="/projectmanager/profile"
             className="hover:text-blue-600 transition duration-300"
           >
             Profile
@@ -117,82 +136,64 @@ function ProjectManager_TaskDetails() {
           </div>
         </section>
 
-        {/* Upload Section */}
-        <section className="mt-8 bg-white shadow-lg rounded-lg p-6 md:p-8">
-  <h3 className="text-xl font-semibold mb-4 text-gray-800">
-    Upload Documents / Photos
-  </h3>
-  <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-    {/* Task ID Input */}
-    <div>
-      <label className="block text-gray-700 font-semibold mb-2">
-        Task ID
-      </label>
-      <input
-        type="text"
-        {...register("task_id", { required: true })}
-        placeholder="Enter Task ID"
-        className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 outline-none transition duration-300"
-      />
-      {errors.task_id && (
-        <span className="text-red-500 text-sm mt-1 block">
-          Task ID is required.
-        </span>
-      )}
-    </div>
-
-    {/* File Upload Input */}
-    <div>
-      <label className="block text-gray-700 font-semibold mb-2">
-        Upload Documents/Photos
-      </label>
-      <input
-        type="file"
-        {...register("documents", { required: true })}
-        className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 outline-none transition duration-300"
-        multiple
-      />
-      {errors.documents && (
-        <span className="text-red-500 text-sm mt-1 block">
-          Uploading files is required.
-        </span>
-      )}
-    </div>
-
-    {/* Current Date & Submit Button */}
-    <div className="flex flex-col sm:flex-row justify-between items-center mt-4">
-      <p className="text-gray-600 mb-4 sm:mb-0">
-        <span className="font-semibold">Current Date: </span>
-        {currentDate}
-      </p>
-      <button
-        type="submit"
-        className="bg-blue-600 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300"
-      >
-        Upload
-      </button>
-    </div>
-  </form>
-
-          {/* Display Uploaded Files */}
-          {uploadedFiles.length > 0 && (
-            <div className="mt-6">
-              <h4 className="text-lg font-semibold text-gray-800 mb-4">
-                Uploaded Files
-              </h4>
-              <ul className="list-disc list-inside">
-                {uploadedFiles.map((file, index) => (
-                  <li key={index} className="text-gray-600">
-                    {file.name}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
+        {/* Documents Section */}
+        <section className="bg-white shadow-lg rounded-lg p-6 mt-8">
+          <h2 className="text-xl font-semibold mb-4">Uploaded Documents</h2>
+          <div className="space-y-4">
+            {uploadedFiles.length > 0 ? (
+              uploadedFiles.map((file, index) => (
+                <div key={index} className="flex items-center justify-between">
+                  <span className="text-gray-700">{file.file.name}</span>
+                  <span className="text-gray-500 text-sm">{file.uploadDate}</span>
+                </div>
+              ))
+            ) : (
+              <p className="text-gray-500">No documents uploaded yet.</p>
+            )}
+          </div>
         </section>
+
+        {/* Chat section */}
+        <div className="border rounded-lg p-4 mt-8 bg-white shadow-lg">
+      <h2 className="text-xl font-semibold mb-4 text-gray-800">Project Chat</h2>
+      <div className="h-[300px] overflow-y-auto mb-4 p-2 bg-gray-100 rounded-lg">
+        {messages.length > 0 ? (
+          messages.map((message, index) => (
+            <div key={index} className={`mb-4 p-3 rounded-lg ${message.sender === 'Contractor' ? 'bg-gray-200 text-gray-800 self-end' : 'bg-gray-200 text-gray-700 self-start'}`}>
+              <div className="flex items-center mb-1">
+                <span className="font-semibold">{message.sender}: </span>
+                <span className="text-sm text-gray-500 ml-2">
+                  {message.timestamp.toLocaleTimeString()}
+                </span>
+              </div>
+              <p>{message.content}</p>
+            </div>
+          ))
+        ) : (
+          <p className="text-gray-500">No messages yet.</p>
+        )}
+      </div>
+      <div className="flex items-center border-t pt-2 mt-4">
+        <input
+          type="text"
+          placeholder="Type your message..."
+          value={newMessage}
+          onChange={(e) => setNewMessage(e.target.value)}
+          onKeyPress={(e) => e.key === 'Enter' && sendMessage()}
+          className="flex-grow border rounded-lg px-3 py-2 text-gray-700"
+        />
+        <button
+          onClick={sendMessage}
+          className="bg-blue-500 text-white rounded-lg px-4 py-2 ml-2 flex items-center"
+        >
+          <Send className="h-4 w-4 mr-2" />
+          Send
+        </button>
+      </div>
+    </div>
       </main>
     </>
   );
 }
 
-export default ProjectManager_TaskDetails;
+export default ProjectManager_TaskDetail;
