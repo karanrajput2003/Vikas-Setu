@@ -56,7 +56,7 @@ function Admin_Project_Details() {
               to={`/admin/addtask?id=${53}`}
               class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 rounded-md px-3 h-8 gap-1"
             >
-              <span class="sr-only sm:not-sr-only sm:whitespace-nowrap">
+              <span class="">
                 + Add Task
               </span>
             </Link>
