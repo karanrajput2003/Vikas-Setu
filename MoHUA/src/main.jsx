@@ -13,6 +13,7 @@ import ContractorRegister from './pages/ContractorRegister.jsx'
 
 // Contractor Pages
 import Contractor_Home from './pages/Contractor/Contractor_Home.jsx'
+import Contractor_Projects from './pages/Contractor/Contractor_Projects.jsx'
 
 
 
@@ -53,6 +54,15 @@ import Department_SubTask_details6 from './pages/Department/subtasks/subtask6.js
 
 
 
+import Field_Officer_Home from './pages/Field_Officer/Field_Officer_Home.jsx'
+import Field_Officer_Tasks from './pages/Field_Officer/Field_Officer_Tasks.jsx'
+import Field_Officer_Profile from './pages/Field_Officer/Field_Officer_Profile.jsx'
+import Field_Officer_TaskDetail from './pages/Field_Officer/Field_Officer_TaskDetail.jsx'
+
+
+
+
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -79,6 +89,10 @@ const router = createBrowserRouter([
   {
     path: "/contractor",
     element: <Contractor_Home />,
+  },
+  {
+    path: "/contractor/projects",
+    element: <Contractor_Projects />,
   },
 
   //  Admin Routes
@@ -200,6 +214,27 @@ const router = createBrowserRouter([
   {
     path: "/department/subtask_details6",
     element: <Department_SubTask_details6 />,
+  },
+
+
+
+
+  // Field Officer
+  {
+    path: "/field_officer",
+    element: <Field_Officer_Home />,
+  },
+  {
+    path: "/field_officer/tasks",
+    element: <Field_Officer_Tasks />,
+  },
+  {
+    path: "/field_officer/profile",
+    element: <Field_Officer_Profile />,
+  },
+  {
+    path: "field_officer/task_details",
+    element: <Field_Officer_TaskDetail />,
   },
 ]);
 

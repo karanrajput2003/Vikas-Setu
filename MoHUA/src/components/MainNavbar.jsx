@@ -24,6 +24,12 @@ function MainNavbar() {
           >
             Admin
           </Link>
+          <Link
+            to="/field_officer"
+            className="text-sm font-medium hover:text-red-500 transition-colors"
+          >
+            Field Officer
+          </Link>
         </div>
         <div className="flex space-x-4">
           <Link
