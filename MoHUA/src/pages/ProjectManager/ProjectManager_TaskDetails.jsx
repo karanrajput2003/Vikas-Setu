@@ -187,7 +187,7 @@ function ProjectManager_TaskDetail() {
           className="bg-blue-500 text-white rounded-lg px-4 py-2 ml-2 flex items-center"
         >
           <Send className="h-4 w-4 mr-2" />
-          Send
+        
         </button>
       </div>
     </div>
