@@ -4,18 +4,20 @@ import { useForm } from "react-hook-form";
 import logo_main from "../../assets/logo_main.png";
 import MoHUA_Logo from "../../assets/MoHUA_LOGO.png";
 import All from "../../assets/header-logo.png";
+import departmentLogin from "../departmentLogin";
 
 function Field_Officer_TaskDetail() {
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
   const [uploadedFiles, setUploadedFiles] = useState([]);
   
   const projectData = {
-    name: "National Highways Authority of India (NHAI)",
+    name: "Land Acquisition & Environmental Clearances",
     description:
       "Launching our revolutionary new product line across multiple markets. Launching our revolutionary new product line across multiple markets. Launching our revolutionary new product line across multiple markets.",
     startDate: "July 1, 2024",
     endDate: "June 30, 2025",
     status: "Ongoing",
+    department: "National Highways Authority of India (NHAI)"
   };
 
   // Get the current date
@@ -82,7 +84,14 @@ function Field_Officer_TaskDetail() {
           <span className="inline-block bg-blue-200 rounded-full px-3 py-1 text-sm font-semibold text-blue-700 mb-4">
             {projectData.status}
           </span>
-
+          <div className="mb-6">
+            <h3 className="font-semibold text-lg text-gray-800 mb-2">
+              Department
+            </h3>
+            <p className="text-gray-600 text-base leading-relaxed">
+              {projectData.department}
+            </p>
+          </div>
           <div className="mb-6">
             <h3 className="font-semibold text-lg text-gray-800 mb-2">
               Description
