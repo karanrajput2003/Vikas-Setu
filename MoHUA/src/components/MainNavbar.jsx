@@ -30,9 +30,15 @@ function MainNavbar() {
           >
             Field Officer
           </Link>
+          <Link
+            to="/projectmanager"
+            className="text-sm font-medium hover:text-red-500 transition-colors"
+          >
+            Project Manager
+          </Link>
         </div>
         <div className="flex space-x-4">
-          <Link
+          {/* <Link
             to="/login"
             className="text-sm font-medium hover:text-red-500 transition-colors"
           >
@@ -49,7 +55,7 @@ function MainNavbar() {
             className="text-sm font-medium hover:text-red-500 transition-colors"
           >
             Contractor Login
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>
