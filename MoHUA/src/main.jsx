@@ -60,6 +60,10 @@ import Field_Officer_Profile from './pages/Field_Officer/Field_Officer_Profile.j
 import Field_Officer_TaskDetail from './pages/Field_Officer/Field_Officer_TaskDetail.jsx'
 
 
+import ProjectManager_Home from './pages/ProjectManager/ProjectManager_Home.jsx'
+import ProjectManager_Tasks from './pages/ProjectManager/ProjectManager_Tasks.jsx'
+import ProjectManager_Profile from './pages/ProjectManager/ProjectManager_Profile.jsx'
+import ProjectManager_TaskDetails from './pages/ProjectManager/ProjectManager_TaskDetails.jsx'
 
 
 
@@ -235,6 +239,24 @@ const router = createBrowserRouter([
   {
     path: "field_officer/task_details",
     element: <Field_Officer_TaskDetail />,
+  },
+
+  // Project Manager
+  {
+    path: "/projectmanager",
+    element: <ProjectManager_Home />,
+  },
+  {
+    path: "/projectmanager/tasks",
+    element: <ProjectManager_Tasks />,
+  },
+  {
+    path: "/projectmanager/profile",
+    element: <ProjectManager_Profile />,
+  },
+  {
+    path: "/projectmanager/task_details",
+    element: <ProjectManager_TaskDetails />,
   },
 ]);
 
