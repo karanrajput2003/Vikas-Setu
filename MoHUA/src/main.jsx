@@ -29,6 +29,7 @@ import Admin_Profile from './pages/CentralAdmin/Admin_Profile.jsx'
 import Admin_Add_Project from './pages/CentralAdmin/Admin_Add_Project.jsx'
 import Admin_Project_Details from './pages/CentralAdmin/Admin_Project_Details.jsx'
 import Admin_Add_Task from './pages/CentralAdmin/Admin_Add_Task.jsx'
+import Admin_Add_SubTask from './pages/CentralAdmin/Admin_Add_SubTask.jsx'
 import Admin_Task_Details from './pages/CentralAdmin/Admin_Task_Details.jsx'
 import Task_details2 from './pages/CentralAdmin/tasks/Task_details2.jsx'
 import Task_details3 from './pages/CentralAdmin/tasks/Task_details3.jsx'
@@ -155,6 +156,10 @@ const router = createBrowserRouter([
   {
     path: "/admin/addtask",
     element: <Admin_Add_Task />,
+  },
+  {
+    path: "/admin/addsubtask",
+    element: <Admin_Add_SubTask />,
   },
   {
     path: "/admin/task_details",
