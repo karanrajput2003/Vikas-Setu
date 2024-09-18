@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import logo_main from "../../assets/logo_main.png";
-import MoHUA_Logo from "../../assets/MoHUA_LOGO.png";
-import All from "../../assets/header-logo.png";
-import departmentLogin from "../departmentLogin";
 import Contractor_Navbar from '../../components/Contractor/Contractor_Navbar'
 
 
@@ -37,11 +33,11 @@ function Contractor_TaskDetails() {
       <Contractor_Navbar />
       {/* Main Content Section */}
       <main className="mt-6 px-4 md:px-6 py-4">
-        <section className="bg-white shadow-lg rounded-lg p-6 md:p-8">
+        <section className="bg-white p-6 md:p-8">
           <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800">
             {projectData.name}
           </h2>
-          <span className="inline-block bg-blue-200 rounded-full px-3 py-1 text-sm font-semibold text-blue-700 mb-4">
+          <span className="inline-block bg-green-200 rounded-full px-3 py-1 text-sm font-semibold text-green-700 mb-4">
             {projectData.status}
           </span>
           <div className="mb-6">
@@ -72,19 +68,19 @@ function Contractor_TaskDetails() {
               <h3 className="font-semibold text-lg text-gray-800 mb-2">
                 End Date
               </h3>
-              <p className="text-gray-600 text-base">{projectData.endDate}</p>
+              <p className="text-gray-600 text-base mb-5">{projectData.endDate}</p>
             </div>
           </div>
           <Link
           to="/contractor/addgrievance?id=123"
-        className="bg-blue-600 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300"
+        className="bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300"
       >Add Grievance
         
       </Link>
         </section>
 
         {/* Upload Section */}
-        <section className="mt-8 bg-white shadow-lg rounded-lg p-6 md:p-8">
+        <section className="mt-8 bg-white p-6 md:p-8">
   <h3 className="text-xl font-semibold mb-4 text-gray-800">
     Upload Documents / Photos
   </h3>

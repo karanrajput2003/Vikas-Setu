@@ -41,6 +41,12 @@ function Contractor_Navbar() {
             My Tasks
           </Link>
           <Link
+            to="/contractor/grievance"
+            className="hover:text-blue-600 transition duration-300"
+          >
+            Grievances
+          </Link>
+          <Link
             to="/contractor/profile"
             className="hover:text-blue-600 transition duration-300"
           >

@@ -17,8 +17,8 @@ import Contractor_Tasks from './pages/Contractor/Contractor_Tasks.jsx'
 import Contractor_Profile from './pages/Contractor/Contractor_Profile.jsx'
 import Contractor_TaskDetails from './pages/Contractor/Contractor_TaskDetails.jsx'
 import Contractor_AddGrievance from './pages/Contractor/Contractor_AddGrievance.jsx'
-
-
+import Contractor_AllGrievance from './pages/Contractor/Contractor_AllGrievance.jsx'
+import Contractor_GrievanceDetails from './pages/Contractor/Contractor_GrievanceDetails.jsx'
 
 
 // Admin Pages
@@ -113,6 +113,14 @@ const router = createBrowserRouter([
   {
     path: "/contractor/addgrievance",
     element: <Contractor_AddGrievance />,
+  },
+  {
+    path: "/contractor/grievance",
+    element: <Contractor_AllGrievance />,
+  },
+  {
+    path: "/contractor/grievance_details",
+    element: <Contractor_GrievanceDetails />,
   },
 
   //  Admin Routes
