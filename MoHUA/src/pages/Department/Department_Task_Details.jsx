@@ -13,6 +13,7 @@ import { useForm } from 'react-hook-form';
 
 // G Map
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+import Sidebar_Department from "../../components/Department/Sidebar_Department";
 
 function Department_Task_Details() {
   const { register, handleSubmit, setValue, formState: { errors } } = useForm();
@@ -34,7 +35,7 @@ function Department_Task_Details() {
     <>
       <TopNavbar />
       <MiddleNavbar />
-      <Sidebar_Admin />
+      <Sidebar_Department />
       <div
         className="max-w-3xl mx-auto bg-white"
         style={{ position: "relative", top: "-380px" }}
