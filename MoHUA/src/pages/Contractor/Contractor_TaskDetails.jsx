@@ -5,9 +5,10 @@ import logo_main from "../../assets/logo_main.png";
 import MoHUA_Logo from "../../assets/MoHUA_LOGO.png";
 import All from "../../assets/header-logo.png";
 import departmentLogin from "../departmentLogin";
-import Officer_Navbar from '../../components/Field_Officer/Officer_Navbar.jsx'
+import Contractor_Navbar from '../../components/Contractor/Contractor_Navbar'
 
-function Field_Officer_TaskDetail() {
+
+function Contractor_TaskDetails() {
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
   const [uploadedFiles, setUploadedFiles] = useState([]);
   
@@ -33,7 +34,7 @@ function Field_Officer_TaskDetail() {
 
   return (
     <>
-      <Officer_Navbar />
+      <Contractor_Navbar />
       {/* Main Content Section */}
       <main className="mt-6 px-4 md:px-6 py-4">
         <section className="bg-white shadow-lg rounded-lg p-6 md:p-8">
@@ -154,4 +155,4 @@ function Field_Officer_TaskDetail() {
   );
 }
 
-export default Field_Officer_TaskDetail;
+export default Contractor_TaskDetails;

@@ -1,16 +1,12 @@
-import React from "react";
+import React from 'react'
+import Contractor_Navbar from '../../components/Contractor/Contractor_Navbar'
 import { Link } from "react-router-dom";
-import logo_main from "../../assets/logo_main.png";
-import MoHUA_Logo from "../../assets/MoHUA_LOGO.png";
-import All from "../../assets/header-logo.png";
-import Manager_Navbar from "../../components/ProjectManager/Manager_Navbar.jsx"
 
-function ProjectManager_Tasks() {
+function Contractor_Tasks() {
   return (
     <>
-      <Manager_Navbar />
-      {/* Main Content Section */}
-      <main className="flex flex-col items-start p-4">
+    <Contractor_Navbar />
+    <main className="flex flex-col items-start p-4">
         <div className="p-6 w-full">
           <div className="overflow-x-auto">
             <table className="min-w-full text-left text-sm table-auto border-collapse">
@@ -25,7 +21,7 @@ function ProjectManager_Tasks() {
               <tbody className="text-gray-700">
                 <tr className="border-b transition-colors hover:bg-gray-100">
                   <td className="py-4 px-4 font-medium text-blue-600">
-                    <Link to={`/projectmanager/task_details?id=${123}`}>
+                    <Link to={`/contractor/task_details?id=${123}`}>
                       Land Acquisition & Environmental Clearances
                     </Link>
                   </td>
@@ -39,7 +35,7 @@ function ProjectManager_Tasks() {
                   </td>
                   <td className="py-4 px-4 text-center">
                     <Link
-                      to={`/projectmanager/task_details?id=${124}`}
+                      to={`/contractor/task_details?id=${123}`}
                       className="text-indigo-600 hover:text-indigo-800"
                     >
                       View
@@ -48,7 +44,7 @@ function ProjectManager_Tasks() {
                 </tr>
                 <tr className="border-b transition-colors hover:bg-gray-100">
                   <td className="py-4 px-4 font-medium text-blue-600">
-                    <Link to={`/projectmanager/task_details?id=${124}`}>
+                    <Link to={`/contractor/task_details?id=${124}`}>
                       Delhi-Mumbai Expressway
                     </Link>
                   </td>
@@ -62,7 +58,7 @@ function ProjectManager_Tasks() {
                   </td>
                   <td className="py-4 px-4 text-center">
                     <Link
-                      to={`/projectmanager/task_details?id=${124}`}
+                      to={`/contractor/task_details?id=${124}`}
                       className="text-indigo-600 hover:text-indigo-800"
                     >
                       View
@@ -75,7 +71,7 @@ function ProjectManager_Tasks() {
         </div>
       </main>
     </>
-  );
+  )
 }
 
-export default ProjectManager_Tasks;
+export default Contractor_Tasks

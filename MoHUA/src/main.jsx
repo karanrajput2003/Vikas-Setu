@@ -13,7 +13,10 @@ import ContractorRegister from './pages/ContractorRegister.jsx'
 
 // Contractor Pages
 import Contractor_Home from './pages/Contractor/Contractor_Home.jsx'
-import Contractor_Projects from './pages/Contractor/Contractor_Projects.jsx'
+import Contractor_Tasks from './pages/Contractor/Contractor_Tasks.jsx'
+import Contractor_Profile from './pages/Contractor/Contractor_Profile.jsx'
+import Contractor_TaskDetails from './pages/Contractor/Contractor_TaskDetails.jsx'
+
 
 
 
@@ -95,10 +98,17 @@ const router = createBrowserRouter([
     element: <Contractor_Home />,
   },
   {
-    path: "/contractor/projects",
-    element: <Contractor_Projects />,
+    path: "/contractor/tasks",
+    element: <Contractor_Tasks />,
   },
-
+  {
+    path: "/contractor/profile",
+    element: <Contractor_Profile />,
+  },
+  {
+    path: "/contractor/task_details",
+    element: <Contractor_TaskDetails />,
+  },
   //  Admin Routes
   {
     path: "/admin",
