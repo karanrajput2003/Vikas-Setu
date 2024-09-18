@@ -75,6 +75,12 @@ function Contractor_TaskDetails() {
               <p className="text-gray-600 text-base">{projectData.endDate}</p>
             </div>
           </div>
+          <Link
+          to="/contractor/addgrievance?id=123"
+        className="bg-blue-600 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300"
+      >Add Grievance
+        
+      </Link>
         </section>
 
         {/* Upload Section */}
