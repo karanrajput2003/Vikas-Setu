@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import Contractor_Navbar from '../../components/Contractor/Contractor_Navbar'
-
+import Contractor_Navbar from "../../components/Contractor/Contractor_Navbar";
 
 function Contractor_TaskDetails() {
-  const { register, handleSubmit, reset, formState: { errors } } = useForm();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
   const [uploadedFiles, setUploadedFiles] = useState([]);
-  
+
   const projectData = {
     name: "Land Acquisition & Environmental Clearances",
     description:
@@ -15,7 +19,7 @@ function Contractor_TaskDetails() {
     startDate: "July 1, 2024",
     endDate: "June 30, 2025",
     status: "Ongoing",
-    department: "National Highways Authority of India (NHAI)"
+    department: "National Highways Authority of India (NHAI)",
   };
 
   // Get the current date
@@ -33,6 +37,8 @@ function Contractor_TaskDetails() {
       <Contractor_Navbar />
       {/* Main Content Section */}
       <main className="mt-6 px-4 md:px-6 py-4">
+        <h1 className="text-4xl mb-6 text-center">TASK DETAILS</h1>
+        <hr></hr>
         <section className="bg-white p-6 md:p-8">
           <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800">
             {projectData.name}
@@ -68,73 +74,75 @@ function Contractor_TaskDetails() {
               <h3 className="font-semibold text-lg text-gray-800 mb-2">
                 End Date
               </h3>
-              <p className="text-gray-600 text-base mb-5">{projectData.endDate}</p>
+              <p className="text-gray-600 text-base mb-5">
+                {projectData.endDate}
+              </p>
             </div>
           </div>
           <Link
-          to="/contractor/addgrievance?id=123"
-        className="bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300"
-      >Add Grievance
-        
-      </Link>
+            to="/contractor/addgrievance?id=123"
+            className="bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300"
+          >
+            Add Grievance
+          </Link>
         </section>
 
         {/* Upload Section */}
         <section className="mt-8 bg-white p-6 md:p-8">
-  <h3 className="text-xl font-semibold mb-4 text-gray-800">
-    Upload Documents / Photos
-  </h3>
-  <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-    {/* Task ID Input */}
-    <div>
-      <label className="block text-gray-700 font-semibold mb-2">
-        Task ID
-      </label>
-      <input
-        type="text"
-        {...register("task_id", { required: true })}
-        placeholder="Enter Task ID"
-        className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 outline-none transition duration-300"
-      />
-      {errors.task_id && (
-        <span className="text-red-500 text-sm mt-1 block">
-          Task ID is required.
-        </span>
-      )}
-    </div>
+          <h3 className="text-xl font-semibold mb-4 text-gray-800">
+            Upload Documents / Photos
+          </h3>
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+            {/* Task ID Input */}
+            <div>
+              <label className="block text-gray-700 font-semibold mb-2">
+                Task ID
+              </label>
+              <input
+                type="text"
+                {...register("task_id", { required: true })}
+                placeholder="Enter Task ID"
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 outline-none transition duration-300"
+              />
+              {errors.task_id && (
+                <span className="text-red-500 text-sm mt-1 block">
+                  Task ID is required.
+                </span>
+              )}
+            </div>
 
-    {/* File Upload Input */}
-    <div>
-      <label className="block text-gray-700 font-semibold mb-2">
-        Upload Documents/Photos
-      </label>
-      <input
-        type="file"
-        {...register("documents", { required: true })}
-        className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 outline-none transition duration-300"
-        multiple
-      />
-      {errors.documents && (
-        <span className="text-red-500 text-sm mt-1 block">
-          Uploading files is required.
-        </span>
-      )}
-    </div>
+            {/* File Upload Input */}
+            <div>
+              <label className="block text-gray-700 font-semibold mb-2">
+                Upload Documents/Photos
+              </label>
+              <input
+                type="file"
+                {...register("documents", { required: true })}
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 outline-none transition duration-300"
+                multiple
+              />
+              {errors.documents && (
+                <span className="text-red-500 text-sm mt-1 block">
+                  Uploading files is required.
+                </span>
+              )}
+            </div>
 
-    {/* Current Date & Submit Button */}
-    <div className="flex flex-col sm:flex-row justify-between items-center mt-4">
-      <p className="text-gray-600 mb-4 sm:mb-0">
-        <span className="font-semibold">Current Date: </span>
-        {currentDate}
-      </p>
-      <button
-        type="submit"
-        className="bg-blue-600 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300"
-      >
-        Upload
-      </button>
-    </div>
-  </form>
+            {/* Current Date & Submit Button */}
+            <div className="flex flex-col sm:flex-row justify-between items-center mt-4">
+              <p className="text-gray-600 mb-4 sm:mb-0">
+                <span className="font-semibold">Current Date: </span>
+                {currentDate}
+              </p>
+              <button
+                type="submit"
+                className="bg-blue-600 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300"
+              >
+                Upload
+              </button>
+            </div>
+          </form>
 
           {/* Display Uploaded Files */}
           {uploadedFiles.length > 0 && (

@@ -23,6 +23,10 @@ function Contractor_GrievanceDetails() {
       <Contractor_Navbar />
       {/* Main Content Section */}
       <main className="mt-6 px-4 md:px-6 py-4">
+      <h1 className="text-4xl mb-6 text-center">
+      GRIEVANCE DETAILS
+            </h1>
+            <hr></hr>
         <section className="bg-white p-6 md:p-8">
           <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800">
             {projectData.name}

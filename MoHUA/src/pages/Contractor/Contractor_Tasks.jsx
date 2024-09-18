@@ -1,13 +1,15 @@
-import React from 'react'
-import Contractor_Navbar from '../../components/Contractor/Contractor_Navbar'
+import React from "react";
+import Contractor_Navbar from "../../components/Contractor/Contractor_Navbar";
 import { Link } from "react-router-dom";
 
 function Contractor_Tasks() {
   return (
     <>
-    <Contractor_Navbar />
-    <main className="flex flex-col items-start p-4">
-        <div className="p-6 w-full">
+      <Contractor_Navbar />
+      <main className="flex flex-col items-start p-4 items-center justify-center">
+        <h1 className="text-4xl mb-6 text-center">ALL TASKS</h1>
+        <hr></hr>
+        <div className="w-full">
           <div className="overflow-x-auto">
             <table className="min-w-full text-left text-sm table-auto border-collapse">
               <thead>
@@ -71,7 +73,7 @@ function Contractor_Tasks() {
         </div>
       </main>
     </>
-  )
+  );
 }
 
-export default Contractor_Tasks
+export default Contractor_Tasks;

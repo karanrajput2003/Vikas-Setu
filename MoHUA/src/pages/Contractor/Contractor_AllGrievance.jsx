@@ -6,7 +6,11 @@ function Contractor_AllGrievance() {
   return (
     <>
     <Contractor_Navbar />
-    <main className="flex flex-col items-start p-4">
+    <main className="flex flex-col items-start p-4 items-center justify-center">
+    <h1 className="text-4xl mb-6 text-center">
+      ALL GRIEVANCES
+            </h1>
+            <hr></hr>
         <div className="p-6 w-full">
           <div className="overflow-x-auto">
             <table className="min-w-full text-left text-sm table-auto border-collapse">
