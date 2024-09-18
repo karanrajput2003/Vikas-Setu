@@ -37,6 +37,7 @@ function Officer_Navbar() {
       <div className="bg-white shadow-md py-4 md:flex md:justify-center md:space-x-8">
         <div className="flex justify-between items-center px-4 md:hidden">
           {/* Mobile menu button */}
+          <span className="text-2xl font-bold text-gray-700">Field Officer</span>
           <button
             onClick={toggleMenu}
             className="text-blue-600 hover:text-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
