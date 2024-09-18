@@ -8,7 +8,7 @@ function MiddleNavbar() {
   return (
     <>
       <header className="flex justify-between items-center p-4 bg-gray-400">
-        <div className="flex items-start space-x-4">
+      <div className="flex items-start space-x-4">
           <img
             src={logo_main}
             alt="Government of India logo"
@@ -16,12 +16,12 @@ function MiddleNavbar() {
           />
         </div>
         <div className="flex items-end space-x-4">
+          <img src={MoHUA_Logo} alt="MoHUA Logo" className="h-20 w-36" />
           <img
-            src={MoHUA_Logo}
-            alt="Government of India logo"
-            className="h-20 w-36"
+            src={All}
+            alt="G20 logo"
+            className="h-20 w-auto hidden md:block"
           />
-          <img src={All} alt="G20 logo" className="h-20 w-auto" />
         </div>
       </header>
     </>

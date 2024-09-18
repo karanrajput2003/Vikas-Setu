@@ -1,13 +1,21 @@
-import React from 'react'
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo_main from "../../assets/logo_main.png";
 import MoHUA_Logo from "../../assets/MoHUA_LOGO.png";
 import All from "../../assets/header-logo.png";
+
 function Officer_Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Toggle menu visibility for mobile devices
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
-    {/* Header Section */}
-    <header className="flex justify-between items-center p-6 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 shadow-lg">
+      {/* Header Section */}
+      <header className="flex justify-between items-center p-6 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 shadow-lg">
         <div className="flex items-start space-x-4">
           <img
             src={logo_main}
@@ -26,30 +34,58 @@ function Officer_Navbar() {
       </header>
 
       {/* Navigation Section */}
-      <div className="w-full bg-white shadow-md py-4">
-        <div className="flex justify-center space-x-8 text-lg font-semibold">
+      <div className="bg-white shadow-md py-4 md:flex md:justify-center md:space-x-8">
+        <div className="flex justify-between items-center px-4 md:hidden">
+          {/* Mobile menu button */}
+          <button
+            onClick={toggleMenu}
+            className="text-blue-600 hover:text-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        {/* Menu items */}
+        <div
+          className={`${
+            isOpen ? "block" : "hidden"
+          } md:flex flex-col md:flex-row md:space-x-8 mt-2 md:mt-0 text-lg font-semibold`}
+        >
           <Link
             to="/field_officer"
-            className="hover:text-blue-600 transition duration-300"
+            className="block py-2 px-4 text-center md:inline hover:text-blue-600 transition duration-300"
           >
             Dashboard
           </Link>
           <Link
             to="/field_officer/tasks"
-            className="hover:text-blue-600 transition duration-300"
+            className="block py-2 px-4 text-center md:inline hover:text-blue-600 transition duration-300"
           >
-            My Tasks
+            Tasks
           </Link>
           <Link
             to="/field_officer/profile"
-            className="hover:text-blue-600 transition duration-300"
+            className="block py-2 px-4 text-center md:inline hover:text-blue-600 transition duration-300"
           >
-            Profile
+            User Profile
           </Link>
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default Officer_Navbar
+export default Officer_Navbar;

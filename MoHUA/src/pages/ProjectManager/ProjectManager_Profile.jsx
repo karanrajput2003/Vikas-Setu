@@ -8,7 +8,7 @@ function ProjectManager_Profile() {
       <Manager_Navbar />
 
       {/* Profile Section */}
-      <div className="container mx-auto mt-10 p-6 bg-white shadow-md rounded-lg max-w-4xl">
+      <div className="container mx-auto mt-10 p-6 bg-white max-w-4xl">
         <div className="flex items-center space-x-4 pb-4 border-b mb-6">
           <CgProfile className="text-4xl text-blue-600" />
           <h2 className="text-2xl font-semibold text-gray-800">Project Manager Profile</h2>

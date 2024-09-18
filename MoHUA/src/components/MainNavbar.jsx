@@ -13,12 +13,6 @@ function MainNavbar() {
             Department
           </Link>
           <Link
-            to="/contractor"
-            className="text-sm font-medium hover:text-red-500 transition-colors"
-          >
-            Contractor
-          </Link>
-          <Link
             to="/admin"
             className="text-sm font-medium hover:text-red-500 transition-colors"
           >
