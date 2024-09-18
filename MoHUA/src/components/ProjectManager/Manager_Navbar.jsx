@@ -77,6 +77,18 @@ function Manager_Navbar() {
             Tasks
           </Link>
           <Link
+            to="/projectmanager/mygrievance"
+            className="block py-2 px-4 text-center md:inline hover:text-blue-600 transition duration-300"
+          >
+            My Grievance
+          </Link>
+          <Link
+            to="/projectmanager/othergrievance"
+            className="block py-2 px-4 text-center md:inline hover:text-blue-600 transition duration-300"
+          >
+            Other Dept Grievances
+          </Link>
+          <Link
             to="/projectmanager/profile"
             className="block py-2 px-4 text-center md:inline hover:text-blue-600 transition duration-300"
           >

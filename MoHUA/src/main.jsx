@@ -68,6 +68,11 @@ import ProjectManager_Home from './pages/ProjectManager/ProjectManager_Home.jsx'
 import ProjectManager_Tasks from './pages/ProjectManager/ProjectManager_Tasks.jsx'
 import ProjectManager_Profile from './pages/ProjectManager/ProjectManager_Profile.jsx'
 import ProjectManager_TaskDetails from './pages/ProjectManager/ProjectManager_TaskDetails.jsx'
+import ProjectManager_AddGrievance from './pages/ProjectManager/ProjectManager_AddGrievance.jsx'
+import ProjectManager_MyGrievance from './pages/ProjectManager/ProjectManager_MyGrievance.jsx'
+import ProjectManager_OtherDeptGrievance from './pages/ProjectManager/ProjectManager_OtherDeptGrievance.jsx'
+import ProjectManager_MyGrievanceDetails from './pages/ProjectManager/ProjectManager_MyGrievanceDetails.jsx'
+import ProjectManager_OtherDeptGrievanceDetails from './pages/ProjectManager/ProjectManager_OtherDeptGrievanceDetails.jsx'
 
 
 
@@ -122,7 +127,6 @@ const router = createBrowserRouter([
     path: "/contractor/grievance_details",
     element: <Contractor_GrievanceDetails />,
   },
-
   //  Admin Routes
   {
     path: "/admin",
@@ -281,6 +285,26 @@ const router = createBrowserRouter([
   {
     path: "/projectmanager/task_details",
     element: <ProjectManager_TaskDetails />,
+  },
+  {
+    path: "/projectmanager/addgrievance",
+    element: <ProjectManager_AddGrievance />,
+  },
+  {
+    path: "/projectmanager/mygrievance",
+    element: <ProjectManager_MyGrievance />,
+  },
+  {
+    path: "/projectmanager/othergrievance",
+    element: <ProjectManager_OtherDeptGrievance />,
+  },
+  {
+    path: "/projectmanager/grievance_details",
+    element: <ProjectManager_MyGrievanceDetails />,
+  },
+  {
+    path: "/projectmanager/other_grievance_details",
+    element: <ProjectManager_OtherDeptGrievanceDetails />,
   },
 ]);
 
